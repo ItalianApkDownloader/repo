@@ -30,9 +30,10 @@ try {
 	
 	
 	
-    if($test =='/salutami')
+    if(strpos($test, '/encryptgjp') === 0)
 	{
-		$word = encode("sirio1998");
+		$temp = explode("/encryptgjp ", $test);
+		$word = encode($temp[1]);
 		$test = $update->message->text;
 	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
 		$response = $client->sendMessage([
