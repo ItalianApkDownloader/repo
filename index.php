@@ -22,9 +22,9 @@ require 'vendor/autoload.php';
 $client = new Zelenin\Telegram\Bot\Api('263463068:AAHx9Qz_P8NB65gN5nUAo8IJkqrOpGqpuk4'); // Set your access token
 $url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
-$test = 'Ciao come stai?';
+$test = $update->message->text;
 
-echo $update->message->text;
+echo "funge";
 //your app
 try {
 	
