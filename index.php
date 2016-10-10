@@ -24,7 +24,7 @@ $url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
 $test = $update->message->text;
 
-print_r($update);
+echo "is working fine!";
 //your app
 try {
 	
@@ -34,12 +34,8 @@ try {
 	{
 		$temp = explode("/encryptgjp ", $test);
 		$word = encode($temp[1]);
-		$test = $update->message->text;
-	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
-		$response = $client->sendMessage([
-		'chat_id' => $update->message->chat->id,
-		'text' => $word
-		]);
+	
+		sendMessage("Encrypted gjp = ".$word);
 		
 	}
     else
@@ -58,7 +54,17 @@ try {
 
 }
 
-
+function sendMessage($word){
+	$client = new Zelenin\Telegram\Bot\Api('263463068:AAHx9Qz_P8NB65gN5nUAo8IJkqrOpGqpuk4'); // Set your access token
+	$url = ''; // URL RSS feed
+	$update = json_decode(file_get_contents('php://input'));
+	$test = $update->message->text;
+	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+		$response = $client->sendMessage([
+		'chat_id' => $update->message->chat->id,
+		'text' => $word
+		]);	
+}
 
 function encode($password)
 {
