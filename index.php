@@ -32,12 +32,8 @@ try {
 	
     if($test =='/salutami')
 	{
+		sendMessage("ciao sono bellissimo");
 		
-		$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
-		$response = $client->sendMessage([
-		'chat_id' => $update->message->chat->id,
-		'text' => $test
-		]);
 	}
     else
     {
@@ -55,3 +51,47 @@ try {
 
 }
 
+function sendMessage($password){
+	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+		$response = $client->sendMessage([
+		'chat_id' => $update->message->chat->id,
+		'text' => $password
+		]);
+}
+
+
+function encode($password)
+{
+
+
+    $array = str_split($password);
+
+    $xor = array(51,55,53,50,54);
+    $key = 0;
+    $k = 0;
+    $cont = 0;
+
+    foreach ($array as &$value) {
+       $parola[$cont] = ord($value) ^ $xor[$k];
+       if($k != 4){
+            $k++;
+       }else{
+            $k = 0;
+       }
+       $cont++;
+    }
+
+
+
+
+    for($k = 0; $k < count($parola); $k++){
+        $temp[$k] = chr($parola[$k]);
+    }
+
+
+
+    $lol = implode($temp);
+    
+    return base64_encode ($lol);
+    
+}
