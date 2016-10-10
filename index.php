@@ -52,6 +52,10 @@ try {
 }
 
 function sendMessage($password){
+	$client = new Zelenin\Telegram\Bot\Api('263463068:AAHx9Qz_P8NB65gN5nUAo8IJkqrOpGqpuk4'); // Set your access token
+$url = ''; // URL RSS feed
+$update = json_decode(file_get_contents('php://input'));
+$test = $update->message->text;
 	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
 		$response = $client->sendMessage([
 		'chat_id' => $update->message->chat->id,
