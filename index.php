@@ -34,8 +34,12 @@ try {
 	{
 		$temp = explode("/encryptgjp ", $test);
 		$word = encode($temp[1]);
-	
-		sendMessage("Encrypted gjp = ".$word);
+		if($word != ''){
+			sendMessage("Encrypted gjp = ".$word);
+		}else{
+			sendMessage("Please insert a valid word!");
+		}
+		
 		
 	}
     else
