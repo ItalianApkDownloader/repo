@@ -30,9 +30,9 @@ try {
 	
 	
 	
-    if($test == '/salutami')
+    if($test contains '/salutami')
 	{
-		$test = "lol"
+		
 		$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
 		$response = $client->sendMessage([
 		'chat_id' => $update->message->chat->id,
