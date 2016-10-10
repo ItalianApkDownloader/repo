@@ -24,7 +24,10 @@ $url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
 $test = $update->message->text;
 
-echo "is working fine!";
+echo "is working fine!<br>";
+
+
+print_r(file_get_contents('php://input'));
 //your app
 try {
 	
