@@ -30,8 +30,9 @@ try {
 	
 	
 	
-    if(strpos($test, '/encryptgjp') === 0)
+    if(strpos($test, '/encryptgjp ') === 0)
 	{
+		
 		$temp = explode("/encryptgjp ", $test);
 		$word = encode($temp[1]);
 		if($word != ''){
