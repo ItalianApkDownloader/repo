@@ -16,7 +16,7 @@ $message = $update["message"]["text"];
 switch($message) {
        
         case "/test":
-                sendMessage($chatId, "".getPassword(3150));
+                sendMessage($chatId, "ciao");
                 break;
         case "/hi":
                 sendMessage($chatId, "hi there!");
