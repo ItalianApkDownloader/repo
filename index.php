@@ -54,7 +54,7 @@ if(strpos($message, '/info ') === 0)
 	$temp = explode("/info ", $message);
 	$userName = $temp[1];
 	$data = getUserInfo($userName);
-	$userInfo = "This are all the info for the user : ".$data ["name"]."\n";
+	$userInfo = "This are all the info for the user : ".$data ["userName"]."\n";
 	$userInfo = $userInfo."AccountID = ".$data["accountID"]."\n";
 	$userInfo = $userInfo."UserID = ".$data["userID"]."\n";
 	$userInfo = $userInfo."Coins = ".$data["coins"]."\n";
