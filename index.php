@@ -38,6 +38,17 @@ if(strpos($message, '/decryptgjp ') === 0)
 
 }
 
+if(strpos($message, '/levelpass ') === 0)
+{
+	$temp = explode("/levelpass ", $message);
+	$word = getPassword($temp[1]);
+	if($word != ''){
+		sendMessage ($chatId,"Decrypted gjp = ".$word);
+	}else{
+		sendMessage ($chatId,"Please insert a valid word!");
+	}
+}
+
 
 
 
