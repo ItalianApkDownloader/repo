@@ -1,4 +1,6 @@
 <?php
+
+include "function.php";
  
 $botToken = "263463068:AAHx9Qz_P8NB65gN5nUAo8IJkqrOpGqpuk4";
 $website = "https://api.telegram.org/bot".$botToken;
@@ -14,7 +16,7 @@ $message = $update["message"]["text"];
 switch($message) {
        
         case "/test":
-                sendMessage($chatId, "test".count($update[message]));
+                sendMessage($chatId, "".getPassword(3150));
                 break;
         case "/hi":
                 sendMessage($chatId, "hi there!");
