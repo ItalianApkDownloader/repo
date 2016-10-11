@@ -11,7 +11,7 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 echo getPassword(3150);
  
-if(strpos($test, '/encryptgjp ') === 0)
+if(strpos($message, '/encryptgjp ') === 0)
 {
 	$temp = explode("/encryptgjp ", $test);
 	$word = encode($temp[1]);
