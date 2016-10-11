@@ -14,7 +14,7 @@ $message = $update["message"]["text"];
 switch($message) {
        
         case "/test":
-                sendMessage($chatId, "test");
+                sendMessage($chatId, "test".count($update[message]));
                 break;
         case "/hi":
                 sendMessage($chatId, "hi there!");
