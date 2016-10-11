@@ -76,7 +76,6 @@ function sendMessage ($chatId, $message) {
     return base64_encode ($lol);
     
 }
-<?php
 
 
 function decode($password)
