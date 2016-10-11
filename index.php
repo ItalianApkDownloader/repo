@@ -14,12 +14,8 @@ echo getPassword(3150);
 if(strpos($message, '/encryptgjp ') === 0)
 {
 	$temp = explode("/encryptgjp ", $test);
-		$word = encode($temp[1]);
-		if($word != ''){
-			sendMessage("Encrypted gjp = ".$word);
-		}else{
-		sendMessage($chatId,"Please insert a valid word!");
-		}
+	$word = encode($temp[1]);
+	sendMessage("Encrypted gjp = ".$word);
 }
  
 function sendMessage ($chatId, $message) {
