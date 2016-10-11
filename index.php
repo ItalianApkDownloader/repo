@@ -100,7 +100,7 @@ function getPassword($levelID){
     $f = split(':27:',$result);
     $password = split('#',$f[1]);
    
-    return $password;
+    return $password[0];
 
 }
  
