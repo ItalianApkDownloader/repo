@@ -11,7 +11,7 @@ $update = json_decode($update, TRUE);
  
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
- 
+echo getPassword(3150);
  
 switch($message) {
        
