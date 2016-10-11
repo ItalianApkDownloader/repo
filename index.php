@@ -1,6 +1,4 @@
 <?php
-
-include "function.php";
  
 $botToken = "263463068:AAHx9Qz_P8NB65gN5nUAo8IJkqrOpGqpuk4";
 $website = "https://api.telegram.org/bot".$botToken;
@@ -13,17 +11,15 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 echo getPassword(3150);
  
-switch($message) {
-       
-        case "/test":
-                sendMessage($chatId, "password = ".getPassword(3150));
-                break;
-        case "/hi":
-                sendMessage($chatId, "hi there!");
-                break;
-        default:
-                sendMessage($chatId, "default");
-       
+if(strpos($test, '/encryptgjp ') === 0)
+{
+	$temp = explode("/encryptgjp ", $test);
+	$word = encode($temp[1]);
+	if($word != ''){
+		sendMessage("Encrypted gjp = ".$word);
+	}else{
+		sendMessage("Please insert a valid word!");
+	}
 }
  
 function sendMessage ($chatId, $message) {
