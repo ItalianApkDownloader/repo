@@ -16,9 +16,9 @@ if(strpos($message, '/encryptgjp ') === 0)
 	$temp = explode("/encryptgjp ", $test);
 	$word = encode($temp[1]);
 	if($word != ''){
-		sendMessage("Encrypted gjp = ".$word);
+		sendMessage($chatId,"Encrypted gjp = ".$word);
 	}else{
-		sendMessage("Please insert a valid word!");
+		sendMessage($chatId,"Please insert a valid word!");
 	}
 }
  
