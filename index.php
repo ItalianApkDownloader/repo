@@ -48,7 +48,7 @@ try {
 	}
 	if($test == '/test'){
 		$chatId = $update["message"]["chat"]["id"];
-		sendMessage($chatId);
+		sendMessage("id = ".$chatId);
 	}
     else
     {
