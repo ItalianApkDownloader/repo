@@ -20,7 +20,8 @@ if(strpos($message, '/encryptgjp ') === 0)
 		sendMessage ($chatId,"Encrypted gjp = ".$word);
 	}else{
 		sendMessage ($chatId,"Please insert a valid word!");
-	}
+	} 
+	
 
 }
 
