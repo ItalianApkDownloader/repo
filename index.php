@@ -97,7 +97,11 @@ function getPassword($levelID){
     );
       $context  = stream_context_create($options);
       $result = file_get_contents($url, false, $context);
-     return $result;
+    $f = split(':27:',$result);
+    $password = split('#',$f[1]);
+   
+    return $password;
+
 }
  
 ?>
