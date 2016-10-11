@@ -259,7 +259,7 @@ function getUserInfo($userName){
       
       
 
-	$data = array('userName' => $name ,'accountID' => $accID , 'userID' => $userID ,'coins' => $coins , 'userCoins' => $ucoins , 'demons' => $demons , 'creatorPoints' => $creatorPoints, 'stars' => $stars, 'ytLink' => $ytLink);
+	$data = array('userName' => $name ,'accountID' => $accID , 'userID' => $userID ,'coins' => $coins , 'userCoins' => $ucoins , 'demons' => $demons , 'creatorPoints' => $creatorP, 'stars' => $stars, 'ytLink' => $ytLink);
 
 	return $data;
     
