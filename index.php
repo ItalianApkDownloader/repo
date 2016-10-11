@@ -51,7 +51,8 @@ if(strpos($message, '/levelpass ') === 0)
 
 if(strpos($message, '/info ') === 0)
 {
-	$userName = "RobTop";
+	$temp = explode("/levelpass ", $message);
+	$userName = getPassword($temp[1]);
 	$data = getUserInfo($userName);
 	$userInfo = "This are all the info for the user : ".$data ["name"]."\n";
 	$userInfo = $userInfo."AccountID = ".$data["accountID"]."\n";
