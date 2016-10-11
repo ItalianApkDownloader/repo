@@ -45,11 +45,10 @@ try {
 		}
 		
 		
-	}else{
-		if($test == '/test'){
-			$chatId = $update["message"]["chat"]["id"];
-			sendMessage($chatId);
-		}
+	}
+	if($test == '/test'){
+		$chatId = $update["message"]["chat"]["id"];
+		sendMessage($chatId);
 	}
     else
     {
