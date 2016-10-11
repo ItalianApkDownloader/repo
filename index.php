@@ -97,29 +97,7 @@ function getPassword($levelID){
     );
       $context  = stream_context_create($options);
       $result = file_get_contents($url, false, $context);
-    $f = split(':27:',$result);
-    $password = split('#',$f[1]);
-    $decode = base64_decode ($password[0]);
-    $array = str_split($decode);
-    $xor = array(50,54,51,54,52);
-    $key = 0;
-    $k = 0;
-    $cont = 0;
-    foreach ($array as &$value) {
-       $parola[$cont] = ord($value) ^ $xor[$k];
-       if($k != 4){
-            $k++;
-       }else{
-            $k = 0;
-       }
-       $cont++;
-    }
-    for($k = 0; $k < count($parola); $k++){
-        $temp[$k] = chr($parola[$k]);
-    }
-    $lol = implode($temp);
-    
-    return $lol;
+     return $result;
 }
  
 ?>
