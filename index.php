@@ -136,7 +136,7 @@ for($k = 0; $k < count($parola); $k++){
 
 $lol = implode($temp);
  
- return $lol;
+ return substr($lol, 1);
  
 
 }
