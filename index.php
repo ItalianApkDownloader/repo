@@ -11,12 +11,13 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 echo getPassword(3150);
  
-if(strpos($message, '/encryptgjp ') === 0)
-{
-	
-	sendMessage("Encrypted gjp = lol");
-}
- 
+sendMessage("Encrypted gjp = lol");
+
+
+
+
+
+
 function sendMessage ($chatId, $message) {
        
         $url = $GLOBALS[website]."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
