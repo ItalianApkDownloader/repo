@@ -16,7 +16,7 @@ echo getPassword(3150);
 switch($message) {
        
         case "/test":
-                sendMessage($chatId, "ciao".getPassword(3150));
+                sendMessage($chatId, "password = ".getPassword(3150));
                 break;
         case "/hi":
                 sendMessage($chatId, "hi there!");
